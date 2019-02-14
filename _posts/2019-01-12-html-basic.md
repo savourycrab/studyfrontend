@@ -27,7 +27,7 @@ author: "savourycrab"
     - Semantic- Contents에 HTML 테그요소를 사용하여 의미를 부여한 상태( 주제다 본문이다 등등을 브라우져가 알 수 있도록)
     - 따라서, HTML은 기본적인 마크업 요소이지만 잘 구조화된 컨텐츠의 기초를 다지는데 매우 중요함
   - 현재의 시멘틱 마크업
-    - <div id="heading" style="font-size: 300%; padding: 10px;">시멘틱 마크업이랑?</div>
+    - <div id="heading" style="font-size: 300%; padding: 10px;">시멘틱 마크업이란?</div>
       - 제목같아 보이지만 의미와 용도면에서 제목으로서의 기능이 없음
       - 몇가지 이슈가 생김
         - 최적화: 검색엔진을 최적화하는데 headings 요소 안에 있는 키워드가 매우 종요
@@ -148,10 +148,10 @@ author: "savourycrab"
   - 단락
 {% highlight python %}
 <p></p>
+{% endhighlight %}
     - 제목
         - 6단계 까지 사용 가능
 {% highlight python %}
-{% endhighlight %}
 <h1> 문서에서 단 한번만 사용(HTML5에서는 섹션 콘텐츠 마다 사용 가능)
 <h2>
 <h3>
@@ -161,9 +161,34 @@ author: "savourycrab"
 {% endhighlight %}
 
 
+# HTML 이미지 & 피규어 & 캡션
 
+ - 주로 사용되는 이미지 포멧
+   - jpg, gif, png, svg
+     - jpg: 투명한 픽셀 허용 않함
+     - png: 투명한 픽셀 처리를 허용하므로 로고, 다이어그램 등에 사용
+     - git: 256비트 컬러, 단순한 그래픽 애니메이션에 사용(졸라맨)
+     - svg: 벡터기반(방향성), 품질 손실없이 확대, 축소 가능(반응형웹에 적합)
 
+ - <img> 테그 사용
+  - <figure>: 전체 사진
+    - caption: 각주
 
+{% highlight python %}
+<figure>
+    <img src="sbs-drama__do-you-want-to-kiss-first.png"
+        alt= "SBS 드라마 <키스 먼저 할까요?>의 한 장면: 배우 김선아가 홀로 겨울바다를 걷는 중..">
+    <!-- figure caption -->
+    <figcaption>-이미지 출처:SBS <키스 먼저 할까요?> 방송화면 캡쳐-</figcaption> 
+</figure>
+ 
+{% endhighlight %}
+   - html은 이미지를 embed하지 않고 연결해서 쓰는 형식임
+
+# HTML 유효성 검사 & 엔티티 코드
+
+ - validator
+ 
 
 
 
