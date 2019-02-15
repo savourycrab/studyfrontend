@@ -187,9 +187,32 @@ author: "savourycrab"
 
 # HTML 유효성 검사 & 엔티티 코드
 
- - validator
+ - 웹 표준을 항상 따르기 어려움
+ - 웹 표준 젠체를 암기하고 있기는 어렵기 때문
+ - validator를 사용해 유효성 검사를 진행하고 권고에 따르는 것이 좋음
+
+# mission for vaidation you should check the example with validator and resolve the problem
  
+ - missions will be done in this weekend because i'm not connecting internet
 
+# HTML 순차/비순차 목록과 아이템
 
+ - li(list): Item 요소
+ - ol(ordered list): li요소를 순차로 표현
+ - ul(unorderd list): liㅇ요소를 비순차로 표현
 
+{% highlight python %}
+<!--ordered list-->
+<ol>
+    <li></li>
+    <li></li>
+    <li></li>
+<ol>
 
+<!--unordered list -->
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+<ul>
+{% endhighlight %}
