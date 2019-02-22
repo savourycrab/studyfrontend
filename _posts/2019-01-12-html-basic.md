@@ -59,7 +59,7 @@ author: "savourycrab"
     - <tagname attribute="value"> contents </tagname>
       - < a href="https://wikipedia.org">Link to Wikipedia</a>
       - 실습( html-basic-syntac.html)
-{% highlight python %}
+{% highlight html %}
 <html>
 <head>
 <meta charset="utf-8">
@@ -79,7 +79,7 @@ author: "savourycrab"
     - 컨텐츠를 감싸지 않아 비어있음
   - 컨텐츠를 감싸지 않기 때문에 닫는 태그가 필요 없음
   - 참고 
-{% highlight python %}
+{% highlight html %}
 <area>
 <base>
 <col>
@@ -99,7 +99,7 @@ author: "savourycrab"
 # 문서유형정의(DTD: Document Type Definition) & 표준 모드
   - 브라우저의 렌더링 모드를 표준으로 작동하게 만들어 줌
   - 문서 유형 정의 방법
-{% highlight python %}
+{% highlight html %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -130,7 +130,7 @@ author: "savourycrab"
 
 # 문서에 사용된 주 언어가 무엇인지 설정하는 lang 속성
   - <html> 루트 요소에 lang 속성을 사용하여 문서에 주로 사용된 언어를 설정할 수 있음
-{% highlight python %}
+{% highlight html %}
 <!doctype html>
 <html lang="ko-KR">
 <head>
@@ -146,12 +146,12 @@ author: "savourycrab"
 # 비주얼 디자인에서 제목(Headings>, 단락(Paragraph) 구조도출
   - 제목(Headings), 단락(Paragraph)를 도출하는 방법
   - 단락
-{% highlight python %}
+{% highlight html %}
 <p></p>
 {% endhighlight %}
     - 제목
         - 6단계 까지 사용 가능
-{% highlight python %}
+{% highlight html %}
 <h1> 문서에서 단 한번만 사용(HTML5에서는 섹션 콘텐츠 마다 사용 가능)
 <h2>
 <h3>
@@ -163,45 +163,57 @@ author: "savourycrab"
 
 # HTML 이미지 & 피규어 & 캡션
 
- - 주로 사용되는 이미지 포멧
-   - jpg, gif, png, svg
-     - jpg: 투명한 픽셀 허용 않함
-     - png: 투명한 픽셀 처리를 허용하므로 로고, 다이어그램 등에 사용
-     - git: 256비트 컬러, 단순한 그래픽 애니메이션에 사용(졸라맨)
-     - svg: 벡터기반(방향성), 품질 손실없이 확대, 축소 가능(반응형웹에 적합)
-
- - <img> 테그 사용
-  - <figure>: 전체 사진
+  - 주로 사용되는 이미지 포멧
+    - jpg, gif, png, svg
+      - jpg: 투명한 픽셀 허용 않함
+      - png: 투명한 픽셀 처리를 허용하므로 로고, 다이어그램 등에 사용
+      - git: 256비트 컬러, 단순한 그래픽 애니메이션에 사용(졸라맨)
+      - svg: 벡터기반(방향성), 품질 손실없이 확대, 축소 가능(반응형웹에 적합)
+ 
+  - <img> 테그 사용
+    - html은 이미지를 embed하지 않고 연결해서 쓰는 형식임
+    - figure: 전체 사진
     - caption: 각주
+    - alt: 그림이 렌더링 되지 못할때 나타나는 대체텍스트 
 
-{% highlight python %}
+  - img 사용 구조
+{% highlight html %}
 <figure>
     <img src="sbs-drama__do-you-want-to-kiss-first.png"
         alt= "SBS 드라마 <키스 먼저 할까요?>의 한 장면: 배우 김선아가 홀로 겨울바다를 걷는 중..">
     <!-- figure caption -->
     <figcaption>-이미지 출처:SBS <키스 먼저 할까요?> 방송화면 캡쳐-</figcaption> 
 </figure>
- 
 {% endhighlight %}
-   - html은 이미지를 embed하지 않고 연결해서 쓰는 형식임
+
+  - img with height and width
+{% highlight html %}
+<figure>
+    <img src="sbs-drama__do-you-want-to-kiss-first.png"
+        alt= "SBS 드라마 <키스 먼저 할까요? width="" height="">의 한 장면: 배우 김선아가 홀로 겨울바다를 걷는 중..">
+    <!-- figure caption -->
+    <figcaption>-이미지 출처:SBS <키스 먼저 할까요?> 방송화면 캡쳐-</figcaption> 
+</figure>
+{% endhighlight %}
 
 # HTML 유효성 검사 & 엔티티 코드
 
- - 웹 표준을 항상 따르기 어려움
- - 웹 표준 젠체를 암기하고 있기는 어렵기 때문
- - validator를 사용해 유효성 검사를 진행하고 권고에 따르는 것이 좋음
+  - 웹 표준을 항상 따르기 어려움
+  - 웹 표준 젠체를 암기하고 있기는 어렵기 때문
+  - validator를 사용해 유효성 검사를 진행하고 권고에 따르는 것이 좋음
 
 # mission for vaidation you should check the example with validator and resolve the problem
  
- - missions will be done in this weekend because i'm not connecting internet
+  - missions will be done in this weekend because i'm not connecting internet
 
 # HTML 순차/비순차 목록과 아이템
 
- - li(list): Item 요소
- - ol(ordered list): li요소를 순차로 표현
- - ul(unorderd list): liㅇ요소를 비순차로 표현
+  - li(list): Item 요소
+  - ol(ordered list): li요소를 순차로 표현
+  - ul(unorderd list): li요소를 비순차로 표현
+  - ol, ul요소는 li요소만을 포함할 수 있음, 같은 속성인 ol, ul요소를 포함할 수 없음
 
-{% highlight python %}
+{% highlight html %}
 <!--ordered list-->
 <ol>
     <li></li>
@@ -215,4 +227,86 @@ author: "savourycrab"
     <li></li>
     <li></li>
 <ul>
+{% endhighlight %}
+
+# HTML 앵커 & 하이퍼링크
+
+  - 페이지 내 이동 또는 다른 페이지로 이동
+    - id, hyperlink
+  - URI(Uniform resource locators)
+    - 'scheme'(https://)'domain'(hahah.com)'path'(/ko-kr/web)
+  - 경로(path)
+    - 절대경로: 현재 html 문서 위치와 상관없이 전체 uri경로로 연결하는 형식(https://domain.com/html)
+    - 상대경로: 현재 html 문서를 기준으로 연결하는 형식(../of/html)
+    - 루트 상대경로: 현재 html 문서를 기준으로 최상위에 위치한 경로로부터 연결하는 형식(/path/of/html)
+  - a 요소에 href 속성을 사용
+    - 지정된 id를 가진 요소의 위치로 이동
+    - 지정된 hyperlink 위치로 이동
+      - target 속성에 _black를 사용하면 새 창으로 열림
+  
+  - id
+{% highlight html %}
+<a href="#hello">anchor</a>
+<h2 id="hello">Hello</h2>
+{% endhighlight %}
+
+  - hyperlink
+{% highlight html %}
+<a href="https://domain.com/html">절대</a>
+<a href="../of/html">상대</a>
+<a href="/path/of/html">루트 상대</a>
+{% endhighlight %}
+
+  - outer hyperlink with image
+{% highlight html %}
+<img src="/path/of/image alt="">
+<a href="https://domain.com/html">hello</a>
+{% endhighlight %}
+
+  - inner hyperlink with image
+{% highlight html %}
+<a href="https://domain.com/html">
+    <img src="/path/of/image alt="">
+    hello
+</a>
+{% endhighlight %}
+
+  - hyperlink with new window 
+{% highlight html %}
+<a href="https://domain.com/html" target="_blank">new window</a>
+{% endhighlight %}
+
+  - hyperlink with email
+{% highlight html %}
+<a href="mailto:email@gmail.com" target="_blank">email</a>
+{% endhighlight %}
+
+# HTML 설명 목록
+  - <dl> 설명 목록
+  - <dt>용어
+  - <dd>용어 설명 
+
+  - 설명 목록 구조
+{% highlight html %}
+<dl>
+    <dt>hello</dt>
+    <dd>
+        <p></p>
+        <a href=""></a>
+    </dd>
+
+    <dt>hello</dt>
+    <dt>hello1</dt>
+    <dd>
+        <ul>
+            <li><a href="" target="_blank"></a></li>
+            <li></li>
+        </ul>
+    </dd>
+
+    <dt></dt>
+    <dd></dd>
+    <dd></dd>
+    <dd></dd>
+</dl>
 {% endhighlight %}
