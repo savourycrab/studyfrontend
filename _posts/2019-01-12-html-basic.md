@@ -282,9 +282,9 @@ author: "savourycrab"
 {% endhighlight %}
 
 # HTML 설명 목록
-  - <dl> 설명 목록
-  - <dt>용어
-  - <dd>용어 설명 
+  - <dl>: 설명 목록
+  - <dt>: 용어
+  - <dd>: 용어 설명 
 
   - 설명 목록 구조
 {% highlight html %}
@@ -310,3 +310,73 @@ author: "savourycrab"
     <dd></dd>
 </dl>
 {% endhighlight %}
+
+# HTML 인용구문 & 줄바꿈
+  - <q>: 인라인 인용 요소
+  - <blockquote>: 블록 인용 요소
+  - <cite>: 창작물 참조 요(출처)
+  - <br>: 줄바꿈 요소
+    - 줄을 바꿀때만 사용
+    - 두번 연속으로 사용하지 말도록함
+      - 두번 사용하는 경우라면 단락(<p>)이 필용한 부분이 아닌지 확인 해볼것
+
+  - <q>
+{% highlight html %}
+<q></q>
+{% endhighlight %}
+
+  - <blockquote>
+{% highlight html %}
+<blockquote>
+    <p></p>
+    <p></p>
+    <p></p>
+</blockquote>
+{% endhighlight %}
+
+
+  - <cite>
+{% highlight html %}
+<blockquote>
+    <p>
+        <q></q>
+    </p>
+    <p></p>
+    <p></p>
+    <cite></cite>
+</blockquote>
+{% endhighlight %}
+
+
+  - <br>
+{% highlight html %}
+<blockquote>
+    <p>
+        <q></q>
+    </p>
+    <p></p>
+    <p> <br> </p>
+    <cite></cite>
+</blockquote>
+{% endhighlight %}
+
+# HTML 어휘 요소들
+  - Semantic, Non-semantic 요소가 모두 있음
+  - Semantic
+    - <storng>: 중요성 강조 요소(중첩가능)
+    - <em>: 일반적인 내용상 강조 요소
+  - Non-semantic
+    - <b>: 단순 구분 목적으로 사용
+    - <i>: 단순 구분 목적으로 사용됨, 기술적 용어, 관용구 등에 사용됨
+
+
+
+
+
+
+
+
+
+
+
+
