@@ -150,9 +150,9 @@ author: "savourycrab"
 <p></p>
 {% endhighlight %}
     - 제목
-        - 6단계 까지 사용 가능
+      - 6단계 까지 사용 가능
 {% highlight html %}
-<h1> 문서에서 단 한번만 사용(HTML5에서는 섹션 콘텐츠 마다 사용 가능)
+<h1> 문서에서 단 한번만 사용(HTML5에서는 섹션<section> 콘텐츠 마다 사용 가능)
 <h2>
 <h3>
 <h4>
@@ -162,7 +162,6 @@ author: "savourycrab"
 
 
 # HTML 이미지 & 피규어 & 캡션
-
   - 주로 사용되는 이미지 포멧
     - jpg, gif, png, svg
       - jpg: 투명한 픽셀 허용 않함
@@ -197,14 +196,12 @@ author: "savourycrab"
 {% endhighlight %}
 
 # HTML 유효성 검사 & 엔티티 코드
-
   - 웹 표준을 항상 따르기 어려움
   - 웹 표준 젠체를 암기하고 있기는 어렵기 때문
   - validator를 사용해 유효성 검사를 진행하고 권고에 따르는 것이 좋음
 
 # mission for vaidation you should check the example with validator and resolve the problem
- 
-  - missions will be done in this weekend because i'm not connecting internet
+  - missions will be done in this weekend because i\'m not connecting internet
 
 # HTML 순차/비순차 목록과 아이템
 
@@ -230,7 +227,6 @@ author: "savourycrab"
 {% endhighlight %}
 
 # HTML 앵커 & 하이퍼링크
-
   - 페이지 내 이동 또는 다른 페이지로 이동
     - id, hyperlink
   - URI(Uniform resource locators)
@@ -334,7 +330,6 @@ author: "savourycrab"
 </blockquote>
 {% endhighlight %}
 
-
   - <cite>
 {% highlight html %}
 <blockquote>
@@ -346,7 +341,6 @@ author: "savourycrab"
     <cite></cite>
 </blockquote>
 {% endhighlight %}
-
 
   - <br>
 {% highlight html %}
@@ -370,6 +364,8 @@ author: "savourycrab"
     - <i>: 단순 구분 목적으로 사용됨, 기술적 용어, 관용구 등에 사용됨
 
 
+# HTML 어휘 요소들
+  -
 
 
 
